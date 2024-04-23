@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from langchain_embeddings import OllamaEmbeddings
+from langchain.embeddings import OllamaEmbeddings
 from langchain.vectorstores import MongoDBAtlasVectorSearch
 from langchain.document_loaders import DirectoryLoader
 from langchain.llms import Ollama
