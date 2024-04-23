@@ -5,9 +5,11 @@ from langchain_community.document_loaders import DirectoryLoader
 # from langchain_community.llms import Ollama
 # from langchain.chains import RetrievalQA
 import params
+import certifi
+ca = certifi.where()
 
 
-client = MongoClient(params.mongodb_string)
+client = MongoClient(params.mongodb_string, tlsCAFile=ca)
 dbName = "langchain_demo"
 collectionName = "coll"
 collection = client[dbName][collectionName]
