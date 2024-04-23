@@ -12,7 +12,7 @@ dbName = "langchain_demo"
 collectionName = "coll"
 collection = client[dbName][collectionName]
 
-loader = DirectoryLoader('./files', glob="./*.*", show_progress=True)
+loader = DirectoryLoader('./files', glob="./*.txt", show_progress=True)
 data = loader.load()
 
 # embdeddings = OllamaEmbeddings()
