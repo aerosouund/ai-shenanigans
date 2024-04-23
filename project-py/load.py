@@ -4,8 +4,6 @@ from langchain.vectorstores import MongoDBAtlasVectorSearch
 from langchain.document_loaders import DirectoryLoader
 from langchain.llms import Ollama
 from langchain.chains import RetrievalQA
-import gradio as gr
-from gradio.themes.base import Base
 import params
 
 
