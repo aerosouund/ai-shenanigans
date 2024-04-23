@@ -24,7 +24,7 @@ def query_data(query):
     as_output = docs[0].page_content
 
     llm = Ollama(model="llama3")
-    retriever = vector_store.as_restriever()
+    retriever = vector_store.as_retriever()
     qa = RetrievalQA.from_chain_type(llm, chain_type="stuff", retriever=retriever)
     retriever_output = qa.run(query)
 
